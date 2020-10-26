@@ -27,6 +27,7 @@ int main(int argc, char **argv) {
 	}
 
 	//------------ connect to server --------------
+	//Client client("2601:547:500:1fb0:c492:55ce:1790:55cd", "12345");
 	Client client(argv[1], argv[2]);
 
 	//------------  initialization ------------
@@ -50,9 +51,9 @@ int main(int argc, char **argv) {
 
 	//create window:
 	SDL_Window *window = SDL_CreateWindow(
-		"gp20 game6: multiplayer", //TODO: remember to set a title for your game!
+		"Tag", //TODO: remember to set a title for your game!
 		SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
-		1280, 720, //TODO: modify window size if you'd like
+		640, 640, //TODO: modify window size if you'd like
 		SDL_WINDOW_OPENGL
 		| SDL_WINDOW_RESIZABLE //uncomment to allow resizing
 		| SDL_WINDOW_ALLOW_HIGHDPI //uncomment for full resolution on high-DPI screens

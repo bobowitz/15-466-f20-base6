@@ -103,8 +103,8 @@ if $(OS) = NT { #Windows
 CLIENT_NAMES =
 	client
 	PlayMode
-	LitColorTextureProgram
-	#ColorTextureProgram #not used right now, but you might want it
+	#LitColorTextureProgram
+	ColorTextureProgram #not used right now, but you might want it
 	Sound
 	load_wav
 	load_opus
@@ -112,6 +112,10 @@ CLIENT_NAMES =
 
 SERVER_NAMES =
 	server
+	;
+
+MAPGEN_NAMES =
+	map_generator
 	;
 
 COMMON_NAMES =
@@ -154,6 +158,11 @@ Objects
 	$(SHOW_SCENE_NAMES:S=.cpp)
 	;
 
+LOCATE_TARGET = map_generator/objs ;
+Objects
+	$(MAPGEN_NAMES:S=.cpp)
+	;
+
 #------------------------
 ##check that a program that uses harfbuzz + freetype functions links properly:
 #LOCATE_TARGET = objs ;
@@ -170,3 +179,5 @@ LOCATE_TARGET = scenes ; #put show-meshes and show-scene utilities in the 'scene
 MainFromObjects show-meshes : $(SHOW_MESHES_NAMES:S=$(SUFOBJ)) $(COMMON_NAMES:S=$(SUFOBJ)) ;
 MainFromObjects show-scene : $(SHOW_SCENE_NAMES:S=$(SUFOBJ)) $(COMMON_NAMES:S=$(SUFOBJ)) ;
 
+LOCATE_TARGET = map_generator/bin ;
+MainFromObjects map_generator : $(MAPGEN_NAMES:S=$(SUFOBJ)) $(COMMON_NAMES:S=$(SUFOBJ)) ;
