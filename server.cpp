@@ -50,7 +50,6 @@ int main(int argc, char **argv) {
 		bool airborne = false;
 		bool sliding_left = false;
 		bool sliding_right = false;
-
 	};
 	std::unordered_map< Connection *, PlayerInfo > players;
 

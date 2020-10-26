@@ -1,10 +1,10 @@
-# (TODO: your game's title)
+# Tag
 
-Author: (TODO: your name)
+Author: Alton Olson
 
-Design: (TODO: In two sentences or fewer, describe what is new and interesting about your game.)
+Design: A fast-paced platformer where you try to tag your friends.
 
-Networking: (TODO: How does your game implement client/server multiplayer? What is transmitted? Where in the code?)
+Networking: The client handles all the input and movement for one player, and transmits a small packet with the location of the player every frame. When a player falls into the pit, a one-byte packet is transmitted.
 
 Screen Shot:
 
@@ -12,9 +12,9 @@ Screen Shot:
 
 How To Play:
 
-(TODO: describe the controls and (if needed) goals/strategy.)
+Arrow keys to move, space to jump. You can slide on walls and wall-jump. Regular rules of tag. Tag-backs are allowed. If nobody is 'it' you can start the game by falling down the pit at the bottom of the level (this respawns you and makes you 'it').
 
-Sources: (TODO: list a source URL for any assets you did not create yourself. Make sure you have a license for the asset.)
+Sources: N/A
 
 This game was built with [NEST](NEST.md).
 
